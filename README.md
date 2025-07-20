@@ -302,3 +302,4 @@ docker run -p 3000:3000 face-recognition-admin
 ---
 
 **Made with ❤️ for modern attendance management systems**
+# Admin_FaceRecogniton
