@@ -1,0 +1,99 @@
+/* Modern Banking Dashboard - App Layout Styles */
+
+/* Main Layout using Design System */
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-neutral-gray50);
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-neutral-gray50);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--layout-sidebar-width);
+  transition: margin-left var(--transition-slow);
+}
+
+.main-content.collapsed {
+  margin-left: var(--layout-sidebar-collapsed-width);
+}
+
+.content-wrapper {
+  padding: var(--layout-header-height) var(--spacing-xl) var(--spacing-xl);
+  min-height: calc(100vh - var(--layout-header-height));
+  max-width: var(--layout-container-max-width);
+  margin: 0 auto;
+}
+
+/* Loading States */
+.app-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--color-neutral-gray50);
+  font-family: var(--font-family-primary);
+}
+
+.loading-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--color-neutral-gray200);
+  border-radius: var(--radius-full);
+  border-top-color: var(--color-primary-blue);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: var(--spacing-lg);
+}
+
+.app-loading p {
+  color: var(--color-neutral-gray500);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Performance optimizations */
+.main-container {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: var(--layout-sidebar-collapsed-width);
+  }
+  
+  .content-wrapper {
+    padding: var(--layout-header-height) var(--spacing-md) var(--spacing-md);
+  }
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .content-wrapper {
+    padding: calc(var(--layout-header-height) + 1rem) var(--spacing-md) var(--spacing-md);
+  }
+}

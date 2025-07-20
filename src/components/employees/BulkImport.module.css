@@ -1,0 +1,135 @@
+.bulkImport {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bulkImport h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-neutral-gray900);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.instructions {
+  background-color: var(--color-neutral-gray50);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.instructions h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-gray900);
+  margin-bottom: var(--spacing-lg);
+}
+
+.instructions ol {
+  padding-left: var(--spacing-xl);
+}
+
+.instructions li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.instructions ul {
+  margin-top: var(--spacing-sm);
+  padding-left: var(--spacing-xl);
+  list-style-type: disc;
+}
+
+.uploadForm {
+  margin-bottom: 2rem;
+}
+
+.fileInput {
+  margin-bottom: 1.5rem;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.fileLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px dashed var(--color-neutral-gray200);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.fileLabel:hover {
+  border-color: var(--color-primary-blue);
+  background-color: var(--color-primary-blue-light);
+}
+
+.fileIcon {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary-blue);
+}
+
+.preview {
+  margin-bottom: 1.5rem;
+}
+
+.preview h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.previewTable {
+  overflow-x: auto;
+  border: 1px solid var(--color-neutral-gray200);
+  border-radius: var(--radius-lg);
+}
+
+.previewTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.previewTable td {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-neutral-gray200);
+  font-size: var(--font-size-sm);
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  background-color: var(--color-primary-blue);
+  color: var(--color-neutral-white);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+}
+
+.submitButton:disabled {
+  background-color: var(--color-neutral-gray300);
+  cursor: not-allowed;
+}
+
+.submitButton:not(:disabled):hover {
+  background-color: var(--color-primary-blue-dark);
+}
+
+.downloadTemplate {
+  text-align: center;
+}
+
+.templateLink {
+  color: var(--color-primary-blue);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+
+.templateLink:hover {
+  text-decoration: underline;
+} 

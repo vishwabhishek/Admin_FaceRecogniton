@@ -1,0 +1,111 @@
+/* Dashboard Styles - Modern Banking Dashboard */
+.dashboard {
+    padding: 0;
+    max-width: var(--layout-container-max-width);
+    margin: 0 auto;
+}
+
+.dashboardHeader {
+    margin-bottom: var(--spacing-xl);
+}
+
+.dashboardTitle {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-gray900);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-sm);
+}
+
+.dashboardSubtitle {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-neutral-gray500);
+    line-height: var(--line-height-normal);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--layout-grid-gap);
+    margin-bottom: var(--spacing-2xl);
+    align-items: stretch;
+}
+
+.sectionTitle {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-gray800);
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: -0.025em;
+}
+
+.attendanceSection {
+    background: var(--color-neutral-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-gray100);
+}
+
+.chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--layout-grid-gap);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.chartCard {
+    background: var(--color-neutral-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-gray100);
+    min-height: 300px;
+}
+
+.quickActionsSection {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.quickActionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .chartsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quickActionsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .attendanceSection,
+    .chartCard {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 640px) {
+    .quickActionsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboardTitle {
+        font-size: var(--font-size-2xl);
+    }
+}

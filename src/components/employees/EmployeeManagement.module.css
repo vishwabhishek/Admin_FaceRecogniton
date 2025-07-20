@@ -1,0 +1,59 @@
+.employeeManagement {
+  padding: 0;
+  max-width: var(--layout-container-max-width);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.header h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-gray900);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-sm);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-gray100);
+  color: var(--color-neutral-gray700);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.actionButton:hover {
+  background-color: var(--color-neutral-gray200);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.actionButton.active {
+  background-color: var(--color-primary-blue);
+  color: var(--color-neutral-white);
+}
+
+.content {
+  background-color: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-gray100);
+}

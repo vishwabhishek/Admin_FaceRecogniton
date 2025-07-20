@@ -1,0 +1,251 @@
+/* Attendance Table Styles - Modern Banking Dashboard */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-grid-gap);
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.summaryContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--layout-grid-gap);
+    margin-bottom: var(--spacing-xl);
+}
+
+.summaryCard {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    background: var(--color-neutral-white);
+    border: 1px solid var(--color-neutral-gray100);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.summaryCard:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.cardIcon {
+    margin-right: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-full);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cardTitle {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-gray600);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-xs);
+}
+
+.cardValue {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-gray900);
+    line-height: var(--line-height-tight);
+}
+
+/* Card color variants */
+.green {
+    background-color: #C6F6D5;
+}
+
+.green .cardIcon {
+    background-color: #B2FFFC;
+    color: #34C759;
+}
+
+.green .cardValue {
+    color: #2E865F;
+}
+
+.red {
+    background-color: #FEE2E2;
+}
+
+.red .cardIcon {
+    background-color: #FFC5C5;
+    color: #EF4444;
+}
+
+.red .cardValue {
+    color: #B91C1C;
+}
+
+.yellow {
+    background-color: #F7DC6F;
+}
+
+.yellow .cardIcon {
+    background-color: #F2C464;
+    color: #F59E0B;
+}
+
+.yellow .cardValue {
+    color: #78350F;
+}
+
+.blue {
+    background-color: #C5CAE9;
+}
+
+.blue .cardIcon {
+    background-color: #A1C9F2;
+    color: #3498DB;
+}
+
+.blue .cardValue {
+    color: #1A56DB;
+}
+
+.purple {
+    background-color: #C9C3E5;
+}
+
+.purple .cardIcon {
+    background-color: #B4A0E3;
+    color: #7A49A5;
+}
+
+.purple .cardValue {
+    color: #4C2889;
+}
+
+.tableContainer {
+    background-color: var(--color-neutral-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-gray100);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableHeader {
+    background-color: var(--color-neutral-gray50);
+}
+
+.tableHeader th {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-gray700);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+    border-bottom: 1px solid var(--color-neutral-gray200);
+}
+
+.tableRow {
+    transition: background-color var(--transition-normal);
+    border-bottom: 1px solid var(--color-neutral-gray100);
+}
+
+.tableRow:hover {
+    background-color: var(--color-neutral-gray50);
+}
+
+.tableCell {
+    padding: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-gray700);
+    border-bottom: 1px solid var(--color-neutral-gray100);
+}
+
+/* Status Badges */
+.statusBadge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.present {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+.absent {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.late {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.paginationButton {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    color: #1F2937;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.paginationButton:hover {
+    background-color: #F3F4F6;
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: #60A5FA;
+    color: #FFFFFF;
+    border-color: #60A5FA;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+        overflow-x: auto;
+    }
+    
+    .tableCell {
+        padding: 0.75rem;
+    }
+}

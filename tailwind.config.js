@@ -1,0 +1,101 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Modern Banking Dashboard Color System
+        primary: {
+          DEFAULT: '#4F46E5',
+          blue: '#4F46E5',
+          'blue-light': '#6366F1',
+          'blue-dark': '#3730A3',
+        },
+        secondary: {
+          red: '#EF4444',
+          'red-light': '#F87171',
+          green: '#10B981',
+          'green-light': '#34D399',
+          orange: '#F59E0B',
+          'orange-light': '#FBBF24',
+          purple: '#8B5CF6',
+          'purple-light': '#A78BFA',
+          cyan: '#06B6D4',
+          'cyan-light': '#22D3EE',
+          pink: '#EC4899',
+          'pink-light': '#F472B6',
+        },
+        neutral: {
+          white: '#FFFFFF',
+          'gray-50': '#F9FAFB',
+          'gray-100': '#F3F4F6',
+          'gray-200': '#E5E7EB',
+          'gray-300': '#D1D5DB',
+          'gray-400': '#9CA3AF',
+          'gray-500': '#6B7280',
+          'gray-600': '#4B5563',
+          'gray-700': '#374151',
+          'gray-800': '#1F2937',
+          'gray-900': '#111827',
+          black: '#000000',
+        },
+        semantic: {
+          success: '#10B981',
+          warning: '#F59E0B',
+          error: '#EF4444',
+          info: '#3B82F6',
+        },
+      },
+      fontFamily: {
+        primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+        mono: '"SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace',
+      },
+      fontSize: {
+        'xs': '0.75rem',
+        'sm': '0.875rem',
+        'base': '1rem',
+        'lg': '1.125rem',
+        'xl': '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+      },
+      spacing: {
+        'xs': '0.25rem',
+        'sm': '0.5rem',
+        'md': '1rem',
+        'lg': '1.5rem',
+        'xl': '2rem',
+        '2xl': '3rem',
+        '3xl': '4rem',
+      },
+      borderRadius: {
+        'sm': '0.25rem',
+        'md': '0.5rem',
+        'lg': '0.75rem',
+        'xl': '1rem',
+        '2xl': '1.5rem',
+      },
+      boxShadow: {
+        'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      },
+      transitionTimingFunction: {
+        'fast': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'normal': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'slow': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      transitionDuration: {
+        'fast': '150ms',
+        'normal': '200ms',
+        'slow': '300ms',
+      },
+    },
+  },
+  plugins: [],
+}

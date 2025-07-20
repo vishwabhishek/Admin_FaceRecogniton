@@ -1,0 +1,157 @@
+/* Dashboard Card Styles - Modern Banking Dashboard */
+.card {
+    background: var(--color-neutral-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-gray100);
+    transition: all var(--transition-normal);
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Status Indicators using Design System Colors */
+.total {
+    border-left: 4px solid var(--color-primary-blue);
+    background: linear-gradient(to right, rgba(79, 70, 229, 0.05), transparent 50%);
+}
+
+.present {
+    border-left: 4px solid var(--color-semantic-success);
+    background: linear-gradient(to right, rgba(16, 185, 129, 0.05), transparent 50%);
+}
+
+.absent {
+    border-left: 4px solid var(--color-semantic-error);
+    background: linear-gradient(to right, rgba(239, 68, 68, 0.05), transparent 50%);
+}
+
+.late {
+    border-left: 4px solid var(--color-semantic-warning);
+    background: linear-gradient(to right, rgba(245, 158, 11, 0.05), transparent 50%);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+
+.cardTitle {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-gray600);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: var(--line-height-tight);
+}
+
+.cardIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background-color: var(--color-neutral-gray100);
+    flex-shrink: 0;
+}
+
+.total .cardIcon {
+    color: var(--color-primary-blue);
+    background-color: rgba(79, 70, 229, 0.1);
+}
+
+.present .cardIcon {
+    color: var(--color-semantic-success);
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.absent .cardIcon {
+    color: var(--color-semantic-error);
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.late .cardIcon {
+    color: var(--color-semantic-warning);
+    background-color: rgba(245, 158, 11, 0.1);
+}
+
+.cardBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardValue {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-gray900);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-xs);
+}
+
+.cardDescription {
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-gray500);
+    line-height: var(--line-height-normal);
+    margin: 0;
+}
+
+.cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-neutral-gray100);
+}
+
+.trendIndicator {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.trendUp {
+    color: var(--color-semantic-success);
+}
+
+.trendDown {
+    color: var(--color-semantic-error);
+}
+
+.trendNeutral {
+    color: var(--color-neutral-gray400);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        padding: var(--spacing-lg);
+        min-height: 120px;
+    }
+    
+    .cardValue {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .cardIcon {
+        width: 2rem;
+        height: 2rem;
+    }
+}

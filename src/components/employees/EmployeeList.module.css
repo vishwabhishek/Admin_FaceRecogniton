@@ -1,0 +1,140 @@
+/* Employee List Styles - Modern Banking Dashboard */
+.employeeList {
+  padding: 0;
+  width: 100%;
+}
+
+.employeeList h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-gray900);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.employeeList h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary-blue);
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.tableContainer {
+  margin-top: var(--spacing-lg);
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-gray100);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: var(--spacing-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--color-neutral-gray100);
+}
+
+.table th {
+  background-color: var(--color-neutral-gray50);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-gray700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-gray700);
+}
+
+.table tr:hover {
+  background-color: var(--color-neutral-gray50);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-neutral-gray100);
+  color: var(--color-neutral-gray600);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.actionButton:hover {
+  background-color: var(--color-neutral-gray200);
+  transform: scale(1.1);
+}
+
+.actionButton.view:hover {
+  background-color: rgba(79, 70, 229, 0.1);
+  color: var(--color-primary-blue);
+}
+
+.actionButton.edit:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-semantic-success);
+}
+
+.actionButton.delete:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-semantic-error);
+}
+
+.noEmployees {
+  text-align: center;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  color: #6b7280;
+}
+
+.noEmployees p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .table {
+    min-width: 600px;
+  }
+  
+  .employeeList {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Add extra styling for buttons */
+.actionButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Ensure there's enough space for the action buttons */
+.table td:last-child {
+  min-width: 120px;
+} 
