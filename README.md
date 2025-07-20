@@ -225,14 +225,7 @@ This frontend application requires a backend API for full functionality. Key API
 - `POST /api/attendance` - Mark attendance
 - `GET /api/attendance/reports` - Generate reports
 
-## 📸 Screenshots
 
-> **Note**: Add screenshots of your application here to showcase the UI and features.
-
-- Dashboard Overview
-- Student Management
-- Attendance Tracking
-- Reports & Analytics
 
 ## 🤝 Contributing
 
@@ -277,7 +270,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email abhishek@example.com or create an issue on GitHub.
+For support, email vishwakarmabhishek2004@gmail.com or create an issue on GitHub.
 
 ## 🚀 Deployment
 
